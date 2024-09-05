@@ -4,11 +4,17 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'SF Pro Display', sans-serif;                                     
+}
+
 h1,
 h2,
 h3 {
     color: rgb(54, 54, 54)
 }
 
-@import "./player";
-@import "./song";
+@import "./_player";
+@import "./_song";
+@import "./_library";
+@import "./nav";
