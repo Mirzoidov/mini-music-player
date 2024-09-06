@@ -29,6 +29,7 @@
     transform: translateX(-100%);
     opacity: 0;
     transition: 0.3s all linear;
+    background-color: #fff;
     h2 {
         padding: 2rem;
     }
@@ -41,7 +42,7 @@
     cursor: pointer;
     transition: 0.2s;
     &:hover {
-        background: rgb(205, 197, 238);
+        background: #f0edf9;
     }
     img {
         width: 30%;
@@ -58,10 +59,16 @@
 }
 
 .selected {
-    background: rgb(189, 172, 255);
+    background: #bdbac4;
 }
 
 .active-library {
     transform: translateX(0%);
     opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+    .library {
+        width: 100%;
+    }
 }

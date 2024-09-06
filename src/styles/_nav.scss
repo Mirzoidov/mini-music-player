@@ -3,6 +3,11 @@ nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    h1 {
+        .icon-logo {
+            margin-right: 10px;
+        }
+    }
     button {
         border: 2px solid #bcbcbc;
         background: transparent;
@@ -12,5 +17,15 @@ nav {
             background: #444;
             color: #fff;
         }
+        .icon-music {
+            margin-left: 8px;
+        }
     }
+}
+@media screen and (max-width: 768px) {
+  nav {
+    button {
+        z-index: 10;
+    }
+  }
 }

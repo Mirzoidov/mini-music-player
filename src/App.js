@@ -7,7 +7,7 @@ import Nav from "./components/Nav"
 // adding styles
 import "./styles/app.scss";
 // adding data
-import data from "./util";
+import data from "./data";
 
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
   })  
 
   const [songs, setSongs] = useState(data());
-  const [currentSong, setCurrentSong] = useState(songs[1]);
+  const [currentSong, setCurrentSong] = useState(songs[0]);
   const [isPlaying, setIsPlaying] = useState(false);
   const [libraryStatus, setLibraryStatus] = useState(false);
 
@@ -37,7 +37,7 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div className={`App ${libraryStatus ? "library-active" : ""}`} >
       <Nav libraryStatus={libraryStatus} setLibraryStatus={setLibraryStatus} />
       <Song currentSong={currentSong} />
       <Player currentSong={currentSong} 
@@ -47,6 +47,9 @@ function App() {
         setSongInfo={setSongInfo}
         songInfo={songInfo}
         timeUpdateHandler={timeUpdateHandler}
+        songs={songs}
+        setCurrentSong={setCurrentSong}
+        setSongs={setSongs}
       />
       <Library 
         songs={songs} 
